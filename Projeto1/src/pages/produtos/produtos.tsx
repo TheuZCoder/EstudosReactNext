@@ -1,40 +1,47 @@
 
 import Header from "@/components/Header"
 import Card from "@/components/Card"
+import Router, { useRouter } from "next/router"
 
 
 const produtos = [
     {
+        id:1,
         produto: 'mouse',
         valor: 49.9,
         desconto: 0,
         disponivel: true
     },
     {
+        id:2,
         produto: 'teclado',
         valor: 79.9,
         desconto: 0,
         disponivel: true
     },
     {
+        id:3,
         produto: 'monitor',
         valor: 449.9,
         desconto: 0,
         disponivel: true
     },
     {
+        id:4,
         produto: 'Cpu',
         valor: 749.9,
         desconto: 0,
         disponivel: true
     },
     {
+        id:5,
         produto: 'Cx.som',
         valor: 249.9,
         desconto: 0,
         disponivel: true
     },
     {
+        id:6,
         produto: 'Microfone',
         valor: 65.9,
         desconto: 0,
@@ -51,6 +58,8 @@ function calcDesc2(v: number, d: number) {
 }
 
 export default function produtosPagina() {
+    const router = useRouter()
+    const {nome,curso} = router.query
     return (
         <div>
             <Header />
@@ -59,7 +68,7 @@ export default function produtosPagina() {
                     produtos.map((e: any) => {
                         if (e.disponivel) {
                             return (
-                                <Card produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc} />
+                                <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc} />
                             )
                         }
                     })

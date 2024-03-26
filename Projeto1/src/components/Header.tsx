@@ -14,7 +14,15 @@ export default function Header() {
         <Link href={"/"}>
           Home
         </Link>
-        <Link href={"/produtos/produtos"}>
+        <Link href={
+          {
+            pathname:"/produtos/produtos",
+            query:{
+              nome:'Matheus',
+              curso:'React Next'
+          }
+          }
+        }>
           Produtos
         </Link>
         <Link href={"/teste/teste"}>
