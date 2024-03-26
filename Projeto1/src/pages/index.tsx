@@ -3,29 +3,24 @@
 
 //const inter = Inter({ subsets: ["latin"] });
 
+import Header from "@/components/Header"
+import Card from "@/components/Card"
+
+
 const nome='Matheus'
 let canal='Noobzinho'
-
-function Topo(){
-  return(
-    <div className='flex justify-between items-center bg-gray-900 h-[100px]'>
-      <div>Logo</div>
-      <div className="flex flex-col justify-center items-center">
-      <div className="text-3xl">{canal}</div>
-      <div className="subtitulo">Curso React</div>
-      </div>
-      <div>{nome}</div>
-    </div>
-  )
-
-}
-
 
 
 export default function Home() {
   return (
     <main>
-     {Topo()}
+    <Header/>
+    <div className="flex justify-center gap-3">
+      <Card produto={'mouse'} valor={'R$49,90'}/>
+      <Card produto={'teclado'} valor={'R$69,90'}/>
+      <Card produto={'monitor'} valor={'R$459,90'}/>
+    </div>
+    
     </main>
   )
 }
