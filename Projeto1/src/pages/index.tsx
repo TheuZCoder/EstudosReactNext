@@ -10,6 +10,46 @@ import Card from "@/components/Card"
 const nome='Matheus'
 let canal='Noobzinho'
 
+
+const produtos=[
+  {
+    produto:'mouse',
+    valor:49.9,
+    desconto:0,
+    disponivel:true
+  },
+  {
+    produto:'teclado',
+    valor:79.9,
+    desconto:0,
+    disponivel:true
+  },
+  {
+    produto:'monitor',
+    valor:449.9,
+    desconto:0,
+    disponivel: true
+  },
+  {
+    produto:'Cpu',
+    valor:749.9,
+    desconto:0,
+    disponivel:true
+  },
+  {
+    produto:'Cx.som',
+    valor:249.9,
+    desconto:0,
+    disponivel: true
+  },
+  {
+    produto:'Microfone',
+    valor:65.9,
+    desconto:0,
+    disponivel:true
+  },
+]
+
 function calcDesc(v:number,d:number) {
   return v-d
 }
@@ -23,10 +63,15 @@ export default function Home() {
     <main>
     <Header/>
     <div className="flex justify-center gap-3">
-      <Card produto={'mouse'} valor={49.90} desconto={10} funcao={calcDesc}/>
-      <Card produto={'teclado'} valor={69.90} desconto={2} funcao={calcDesc}/>
-      <Card produto={'monitor'} valor={459.90} desconto={5} funcao={calcDesc2}/>
-      <Card produto={'Cpu'} valor={759.90} desconto={50} funcao={calcDesc2}/>
+      {
+        produtos.map((e:any)=>{
+          if (e.disponivel) {
+            return(
+              <Card produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc}/>
+            )
+          }     
+        })
+      }
     </div>
     
     </main>
