@@ -3,6 +3,7 @@ interface CardProps{
     valor:number,
     desconto:number,
     funcao:any
+    children: any
 }
 
 
@@ -18,6 +19,7 @@ export default function Card(props: CardProps) {
                     <div>Preço venda: R${ props.funcao (props.valor,props.desconto)}</div> 
                 </div>
             )}
+            <div>{props.children}</div>
         </div>// sempre utilizar props porque é oq esta sendo chamado na função CARD(props: CardProps)
     )
 }

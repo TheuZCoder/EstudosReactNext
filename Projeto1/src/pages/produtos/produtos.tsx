@@ -68,7 +68,9 @@ export default function produtosPagina() {
                     produtos.map((e: any) => {
                         if (e.disponivel) {
                             return (
-                                <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc} />
+                                <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calcDesc} > 
+                                    Teste
+                                </Card>
                             )
                         }
                     })

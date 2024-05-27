@@ -10,17 +10,17 @@ export default function Header() {
         <div className="subtitulo">Curso React</div>
       </div>
 
-      <nav>
+      <nav className="flex gap-5">
         <Link href={"/"}>
           Home
         </Link>
         <Link href={
           {
-            pathname:"/produtos/produtos",
-            query:{
-              nome:'Matheus',
-              curso:'React Next'
-          }
+            pathname: "/produtos/produtos",
+            query: {
+              nome: 'Matheus',
+              curso: 'React Next'
+            }
           }
         }>
           Produtos

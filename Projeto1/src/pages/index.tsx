@@ -28,7 +28,7 @@ export default function Home() {
         <Header />
       </div>
       <div>
-        <Card/>
+      
       </div>
 
     </main>
