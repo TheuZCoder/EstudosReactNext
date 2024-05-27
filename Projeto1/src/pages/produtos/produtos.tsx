@@ -1,7 +1,7 @@
 
 import Header from "@/components/Header"
 import Card from "@/components/Card"
-import Router, { useRouter } from "next/router"
+import { useRouter } from "next/router"
 
 
 const produtos = [
