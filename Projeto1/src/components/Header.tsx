@@ -28,6 +28,9 @@ export default function Header() {
         <Link href={"/teste/teste"}>
           Teste
         </Link>
+        <Link href={"/inputs/inputs"}>
+          Inputs
+        </Link>
       </nav>
 
 
